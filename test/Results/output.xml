@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.5 on win32)" generated="20210816 20:42:56.344" rpa="false" schemaversion="2">
+<suite id="s1" name="Login" source="C:\Users\galea\OneDrive\Área de Trabalho\treinamentoSIS\webautomacion\test\features\login.robot">
+<test id="s1-t1" name="Cenario: Login com sucesso">
+<kw name="Dado que o cliente esteja na tela inicial da aplicação" library="home_kws">
+<kw name="Abrir sessão" library="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://automationpractice.com/index.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210816 20:42:57.260" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210816 20:42:57.260" endtime="20210816 20:43:03.458"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210816 20:43:03.458" endtime="20210816 20:43:03.593"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>60</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20210816 20:43:03.593" endtime="20210816 20:43:03.596"/>
+</kw>
+<status status="PASS" starttime="20210816 20:42:57.259" endtime="20210816 20:43:03.596"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.BTN_SIGNIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210816 20:43:03.597" endtime="20210816 20:43:03.694"/>
+</kw>
+<status status="PASS" starttime="20210816 20:42:57.258" endtime="20210816 20:43:03.694"/>
+</kw>
+<kw name="E acessar a tela de login" library="home_kws">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME.BTN_SIGNIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210816 20:43:03.698" level="INFO">Clicking element 'xpath://a[@class='login']'.</msg>
+<status status="PASS" starttime="20210816 20:43:03.696" endtime="20210816 20:43:04.780"/>
+</kw>
+<status status="PASS" starttime="20210816 20:43:03.696" endtime="20210816 20:43:04.781"/>
+</kw>
+<kw name="Quando realizar o login com sucesso" library="login_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210816 20:43:04.783" endtime="20210816 20:43:05.396"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_EMAIL}</arg>
+<arg>galeazigabi1@teste.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210816 20:43:05.398" level="INFO">Typing text 'galeazigabi1@teste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210816 20:43:05.396" endtime="20210816 20:43:05.583"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_SENHA}</arg>
+<arg>Semprerico@1997</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210816 20:43:05.587" level="INFO">Typing text 'Semprerico@1997' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20210816 20:43:05.584" endtime="20210816 20:43:05.774"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN.BTN_SIGNIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210816 20:43:05.776" level="INFO">Clicking element 'id:SubmitLogin'.</msg>
+<status status="PASS" starttime="20210816 20:43:05.775" endtime="20210816 20:43:07.514"/>
+</kw>
+<status status="PASS" starttime="20210816 20:43:04.782" endtime="20210816 20:43:07.514"/>
+</kw>
+<kw name="Então deve visualizar a tela de My Account" library="minha_conta_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MINHA_CONTA.TITULO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210816 20:43:07.518" endtime="20210816 20:43:07.562"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TITULO_ATUAL}</var>
+<arg>${MINHA_CONTA.TITULO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210816 20:43:07.609" level="INFO">${TITULO_ATUAL} = MY ACCOUNT</msg>
+<status status="PASS" starttime="20210816 20:43:07.563" endtime="20210816 20:43:07.609"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${TITULO_ATUAL}</arg>
+<arg>MY ACCOUNT</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210816 20:43:07.609" endtime="20210816 20:43:07.610"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210816 20:43:07.611" endtime="20210816 20:43:10.027"/>
+</kw>
+<status status="PASS" starttime="20210816 20:43:07.515" endtime="20210816 20:43:10.028"/>
+</kw>
+<kw name="Encerrar sessão" library="setup">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210816 20:43:10.030" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210816 20:43:10.030" endtime="20210816 20:43:10.030"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210816 20:43:10.031" endtime="20210816 20:43:10.031"/>
+</kw>
+<status status="PASS" starttime="20210816 20:43:10.029" endtime="20210816 20:43:10.031"/>
+</kw>
+<status status="PASS" starttime="20210816 20:42:57.256" endtime="20210816 20:43:10.032"/>
+</test>
+<doc>Cenarios de testes relacionado ao login da aplicação.</doc>
+<status status="PASS" starttime="20210816 20:42:56.351" endtime="20210816 20:43:10.034"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210816 20:42:57.212" level="ERROR">Error in file 'C:\Users\galea\OneDrive\Área de Trabalho\treinamentoSIS\webautomacion\src\auto\keywords\home_kws.robot' on line 4: Resource file '..\..\config\package.robot' does not exist.</msg>
+<msg timestamp="20210816 20:42:57.219" level="ERROR">Error in file 'C:\Users\galea\OneDrive\Área de Trabalho\treinamentoSIS\webautomacion\src\auto\keywords\login_kws.robot' on line 4: Resource file '..\..\config\package.robot' does not exist.</msg>
+<msg timestamp="20210816 20:42:57.229" level="ERROR">Error in file 'C:\Users\galea\OneDrive\Área de Trabalho\treinamentoSIS\webautomacion\src\auto\keywords\minha_conta_kws.robot' on line 4: Resource file '..\..\config\package.robot' does not exist.</msg>
+</errors>
+</robot>
