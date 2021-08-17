@@ -10,5 +10,13 @@ Test Teardown    Encerrar sessão
 Cenario: Login com sucesso
     Dado que o cliente esteja na tela inicial da aplicação
     E acessar a tela de login
-    Quando realizar o login com sucesso
+    Quando inserir os dados de login                          EMAIL=galeazigabi1@teste.com    SENHA=Semprerico@1997    
+    E clicar no elemento                                      ${LOGIN.BTN_SIGNIN}
     Então deve visualizar a tela de My Account
+
+Cenario: Login com credenciais inválidos
+    Dado que o cliente esteja na tela inicial da aplicação
+    E acessar a tela de login
+    Quando inserir os dados de login                          EMAIL=galeaziggggggg1@teste.com    SENHA=SempreR$%E@97
+    E clicar no elemento                                      ${LOGIN.BTN_SIGNIN}
+    Então deve apresentar mensagem                            ${LOGIN.TXT_ERRO}                  Authentication failed.
