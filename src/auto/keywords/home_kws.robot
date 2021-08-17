@@ -4,8 +4,7 @@ Documentation    Keywords relacionadas a tela home
 Resource    ../../config/package.robot
 
 *** Keywords ***
-Dado que o cliente esteja na tela inicial da aplicação
-    Abrir sessão                     
+Dado que o cliente esteja na tela inicial da aplicação                     
     Wait Until Element Is Visible    ${HOME.BTN_SIGNIN}
 
 E acessar a tela de login
