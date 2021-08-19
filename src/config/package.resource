@@ -15,3 +15,6 @@ Resource    ../auto/keywords/common_kws.robot
 Resource    ../auto/elements/home_ets.resource
 Resource    ../auto/elements/login_ets.resource
 Resource    ../auto/elements/minha_conta_ets.resource
+
+#Data
+Variables    ../auto/data/dados.yaml
