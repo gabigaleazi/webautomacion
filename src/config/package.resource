@@ -18,3 +18,4 @@ Resource    ../auto/elements/minha_conta_ets.resource
 
 #Data
 Variables    ../auto/data/dados.yaml
+Variables    ../auto/data/mensagens.yaml
