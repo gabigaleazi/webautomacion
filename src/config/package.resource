@@ -4,6 +4,7 @@ Documentation    Dependências do projeto
 Library    SeleniumLibrary
 
 Resource    setup.robot
+Variables   setup.yaml
 
 #Keywords
 Resource    ../auto/keywords/home_kws.robot

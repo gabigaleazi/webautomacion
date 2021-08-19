@@ -3,9 +3,9 @@ Documentation    Configurações de inicialização e finalização dos testes
 
 *** Keywords ***
 Abrir sessão
-    Open Browser    http://automationpractice.com/index.php    chrome
+    Open Browser               ${CONFIG.URL}        ${CONFIG.NAVEGADOR}
     Maximize Browser Window
-    Set Selenium Timeout    60
+    Set Selenium Timeout       ${CONFIG.TIMEOUT}
 
 Encerrar sessão
     Capture Page Screenshot
