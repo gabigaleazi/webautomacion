@@ -1,0 +1,7 @@
+MASSA_DADOS:
+  LOGIN:
+    EMAIL: galeazigabi1@teste.com
+    SENHA: Semprerico@1997
+  LOGIN_INVALIDO:
+    EMAIL: galeaziggggggg1@teste.com
+    SENHA: SempreR$%E@97
