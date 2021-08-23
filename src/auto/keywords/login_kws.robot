@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Keywords relacionadas a tela login
 
-Resource    ../../config/package.robot
+Resource    ../../config/package.resource
 
 *** Keywords ***
 Quando inserir os dados de login

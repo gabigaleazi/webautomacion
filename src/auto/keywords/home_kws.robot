@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Keywords relacionadas a tela home
 
-Resource    ../../config/package.robot
+Resource    ../../config/package.resource
 
 *** Keywords ***
 Dado que o cliente esteja na tela inicial da aplicação                     

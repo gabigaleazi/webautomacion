@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Keywords relacionadas a tela minha conta
 
-Resource    ../../config/package.robot
+Resource    ../../config/package.resource
 
 *** Keywords ***
 Então deve visualizar a tela de My Account
